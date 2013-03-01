@@ -1,0 +1,26 @@
+application: libraryviz
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /static
+  static_dir: static
+
+- url: /book
+  script: book.app
+
+- url: /load
+  script: book.app
+
+- url: .*
+  script: book.app
+
+libraries:
+- name: webapp2
+  version: "2.5.1"

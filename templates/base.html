@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script> -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>{% block title %}{{ application_name }}{% endblock %}</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css"/>
+    <link rel="stylesheet" href="static/drtask.css"/>
+    {% block head %}{% endblock %}
+  </head>
+  <body {% block bodyattributes %}{% endblock %}>
+    {% block header %}
+      <div id="header">
+        <div class="login">
+          {% if user %}
+            <span class="item nickname">Name: {{ user.nickname }}</span> |
+            <span class="item"><a href="{{ logout|escape }}">Sign out</a></span>
+          {% else %}
+            <span class="item"><a href="{{ login|escape }}">Sign in</a></span>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+    <div id="body">{% block body %}{% endblock %}</div>
+    {% block footer %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.box {
+  width: 120px;
+  margin: 0px;
+  float: left;
+}
+
+.img {
+  width: 128px;
+  height; 200px;
+}
+
+.box:hover {
+  background: #FACC2E;
+}
+
+#container {
+  background: black;
+}

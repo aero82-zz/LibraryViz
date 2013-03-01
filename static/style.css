@@ -1,0 +1,48 @@
+/* Layout */
+
+body {
+    font:normal 12px/1.6em Arial, Helvetica, sans-serif;
+	color:#2a3845;
+	margin:0;
+	padding:0;
+	background:#FFFFFF;
+}
+
+/*
+div {
+  border:1px solid black;
+}
+*/
+
+#header {
+	margin:0 1px;
+  background:#f7f7f7;
+  border-bottom:1px solid #f0e9eb;
+  padding:10px 15px;
+  text-align:right;
+}
+
+#journal {
+  color:gray;
+  padding: 10px;
+}
+
+#left-column {
+	width:300px;
+	padding:20px 30px 30px;
+	float:left;
+}
+
+#right-column {
+	width:270px;
+	float:left;
+  padding:20px 30px 30px;
+}
+
+#footer {
+	background:#f7f7f7;
+	border-top:1px solid #f0e9eb;
+	padding:10px 15px;
+	clear:both;
+  text-align:right;
+}

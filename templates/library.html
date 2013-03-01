@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Book Gallery</title>
+    <link rel="stylesheet" href="../static/css/bookstyle.css"/>
+    <link rel="stylesheet" href="../static/css/style.css" />
+{% endblock %}
+
+{% block body %}
+<div id="container">
+  {% for book in books %}
+  <div class="box">
+    <img src="{{ book.url }}"/>
+  </div>
+  {% endfor %}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../static/jquery.masonry.min.js"></script>
+<script src="../static/bookscript.js"></script>
+<script>
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector : '.box',
+    columnWidth : 20,
+    isAnimated: true
+  });
+});
+</script>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
